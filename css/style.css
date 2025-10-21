@@ -1,0 +1,137 @@
+:root {
+  --secondary-body-color: #2a2a2a;
+  --primary-body-color: #171717;
+  --primary-bg-color: #7511a0;
+  --secondary-bg-color: #ff9a9e;
+  --primary-txt-color: #fff;
+  --label-modal-color: #888888;
+  --primary-bg-table: #222222;
+  --secondary-bg-table: #1a1a1a;
+}
+body::selection {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-txt-color);
+}
+body {
+  color: var(--primary-txt-color);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+h1,
+h3 {
+  font-family: "Pacifico", cursive;
+}
+
+span.title-desc {
+  font-family: "Righteous", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin-inline: 1px;
+  font-weight: 500;
+}
+
+.title-page {
+  font-size: 50px;
+  line-height: 60px;
+  margin-left: 8px;
+  font-weight: 500;
+  padding: 8px 0px;
+  position: relative;
+  width: fit-content;
+}
+.title-page::before {
+  content: "";
+  background-color: var(--primary-bg-color);
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  left: 0;
+  bottom: 15%;
+  transition: height 800ms;
+  z-index: -1;
+}
+.title-page:hover::before {
+  height: 50%;
+}
+.title-desc-content {
+  border-top: 2px var(--primary-bg-color) dotted;
+}
+.title-desc-content {
+  background: linear-gradient(
+    90deg,
+    var(--primary-bg-color) 20%,
+    var(--secondary-bg-color)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.title-table h2 {
+  color: var(--primary-txt-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+.add-bookmark-btn {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-txt-color);
+}
+.add-bookmark-btn:hover {
+  background-color: #9324c2;
+}
+
+/************************** Table *****************************/
+.elements .container .row .table tbody tr:nth-child(odd) td,
+.elements .container .row .table tbody tr:nth-child(odd) th {
+  color: #d8d8d8;
+  background-color: var(--secondary-bg-table);
+  border: none;
+}
+.elements .container .row .table tbody tr:nth-child(even) td,
+.elements .container .row .table tbody tr:nth-child(even) th,
+.elements .container .row .table thead th {
+  color: #d8d8d8;
+  background-color: var(--primary-bg-table);
+  border: none;
+}
+.elements .container .row .table tbody .visit-btn {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-txt-color);
+}
+/********************** Modal Form inputs *************************/
+
+section .modal-dialog .modal-body .form-control,
+section .modal-dialog .modal-body .form-control:focus {
+  border: 1px solid var(--primary-bg-color);
+  box-shadow: none;
+}
+section .modal-dialog .modal-body .form-control.is-valid,
+section .modal-dialog .modal-body .form-control.is-valid:focus {
+  border: 1px solid rgb(6, 91, 6);
+
+  box-shadow: none;
+}
+
+section .modal-dialog .modal-body .form-control.is-invalid,
+section .modal-dialog .modal-body .form-control.is-invalid:focus {
+  border: 1px solid red;
+  box-shadow: none;
+}
+section .modal-dialog .modal-body .form-select,
+section .modal-dialog .modal-body .form-control,
+section .modal-dialog .modal-content {
+  color: var(--primary-txt-color);
+  background-color: var(--secondary-body-color);
+  border-color: var(--primary-body-color);
+}
+section .modal-dialog .modal-body label {
+  color: var(--label-modal-color);
+}
+@media screen and (max-width: 576px) {
+  .container .row .col {
+    min-width: 100%;
+  }
+}
