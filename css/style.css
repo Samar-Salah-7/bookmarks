@@ -8,7 +8,11 @@
   --primary-bg-table: #222222;
   --secondary-bg-table: #1a1a1a;
 }
-body::selection {
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::selection {
   background-color: var(--primary-bg-color);
   color: var(--primary-txt-color);
 }
@@ -16,7 +20,6 @@ body {
   color: var(--primary-txt-color);
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   font-family: "PT Sans Caption", sans-serif;
 }
 
